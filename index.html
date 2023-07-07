@@ -13,9 +13,11 @@
     </header>
 
     <button id="start-game-button">Start game</button>
+    <button id="next-challenge-button" class="hidden">Next</button>
     <main id="grid-container">
       <main id="player">
         <p>You</p>
+        <p id="player-points"></p>
         <button id="rock-button" class="hidden" value="rock">Rock</button>
         <button id="paper-button" class="hidden" value="paper">Paper</button>
         <button id="scissors-button" class="hidden" value="scissors">Scissors</button>
@@ -37,7 +39,8 @@
         </main>
         <main id="computer">
         <p>Computer</p>
-        
+        <p id="computer-points"></p>
+          <main id="computer-options">
             <p class="hidden">
             <h3 id="rock-headline-computer" class="hidden">Rock</h3>
             <img id="rock-image-computer" class="hidden" src="./rock-img.jpg" />
@@ -50,6 +53,7 @@
             <h3 id="scissors-headline-computer" class="hidden">Scissors</h3>
             <img id="scissors-image-computer" class="hidden" src="./scissors-img.jpg" />
         </p>
+        </main>
         </main>
     </main>
 

@@ -9,7 +9,6 @@ window.addEventListener("load", start);
 function start() {
   console.log("JS kører");
   document.querySelector("#start-game-button").addEventListener("click", startGameClicked);
-
 }
 
 // ======== start game function clicked =======
@@ -99,4 +98,37 @@ function computerChosenWhatToPlay(playerValue) {
       console.log(playerPoints);
     }
   }
+  showPoints();
+  document.querySelector("#next-challenge-button").classList.remove("hidden");
+  document.querySelector("#next-challenge-button").addEventListener("click", nextGameClicked);
+}
+
+function showPoints() {
+  document.querySelector("#computer-points").textContent = computerPoints;
+  document.querySelector("#player-points").textContent = playerPoints;
+}
+
+function nextGameClicked() {
+  document.querySelector("#rock-button").classList.remove("hidden");
+  document.querySelector("#paper-button").classList.remove("hidden");
+  document.querySelector("#scissors-button").classList.remove("hidden");
+
+  document.querySelector("#rock-headline-player").classList.add("hidden");
+  document.querySelector("#rock-image-player").classList.add("hidden");
+  document.querySelector("#scissors-headline-player").classList.add("hidden");
+  document.querySelector("#scissors-image-player").classList.add("hidden");
+  document.querySelector("#paper-headline-player").classList.add("hidden");
+  document.querySelector("#paper-image-player").classList.add("hidden");
+
+  document.querySelector("#rock-headline-computer").classList.add("hidden");
+  document.querySelector("#rock-image-computer").classList.add("hidden");
+  document.querySelector("#scissors-headline-computer").classList.add("hidden");
+  document.querySelector("#scissors-image-computer").classList.add("hidden");
+  document.querySelector("#paper-headline-computer").classList.add("hidden");
+  document.querySelector("#paper-image-computer").classList.add("hidden");
+
+  document.querySelector("#rock-button").addEventListener("click", chooseRock);
+  document.querySelector("#paper-button").addEventListener("click", choosePaper);
+  document.querySelector("#scissors-button").addEventListener("click", chooseScissors);
+  document.querySelector("#start-game-button").classList.add("hidden");
 }
