@@ -141,11 +141,12 @@ function nextGameClicked() {
     document.querySelector("#paper-button").classList.add("hidden");
     document.querySelector("#scissors-button").classList.add("hidden");
     document.querySelector("#next-challenge-button").classList.add("hidden");
-    document.querySelector("#new-game-button").addEventListener("click", startNewGame);
     if (playerPoints === 10) {
       document.querySelector("#result-text").textContent = "Congratulations! You win";
+      document.querySelector("#new-game-button").addEventListener("click", startNewGame);
     } else if (computerPoints === 10) {
       document.querySelector("#result-text").textContent = "Well fought. Unfortunately it was not enough. Computer wins";
+      document.querySelector("#new-game-button").addEventListener("click", startNewGame);
     }
   }
 }
@@ -153,5 +154,7 @@ function nextGameClicked() {
 function startNewGame() {
   computerPoints = 0;
   playerPoints = 0;
+  document.querySelector("#computer-points").textContent = computerPoints;
+  document.querySelector("#player-points").textContent = playerPoints;
   startGameClicked();
 }
