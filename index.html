@@ -12,26 +12,26 @@
       <h1>Rock, paper, scissors</h1>
     </header>
 
-    <button>Start game</button>
+    <button id="start-game-button">Start game</button>
     <main id="grid-container">
-      <main id="you">
+      <main id="player">
         <p>You</p>
-        <button id="rock-button">Rock</button>
-        <button id="paper-button">Paper</button>
-        <button id="scissors-button">Scissors</button>
-        <main id="you-options">
+        <button id="rock-button" class="hidden">Rock</button>
+        <button id="paper-button" class="hidden">Paper</button>
+        <button id="scissors-button" class="hidden">Scissors</button>
+        <main id="player-options">
         
         <p class="hidden">
-            <h3>Rock</h3>
-            <img src="./rock-img.jpg" />
+            <h3 id="rock-headline-player" class="hidden">Rock</h3>
+            <img id="rock-image-player" class="hidden" src="./rock-img.jpg" />
         </p>
         <p class="hidden">
-            <h3>Paper</h3 >
-            <img src="paper-img.jpg" />
+            <h3 id="paper-headline-player" class="hidden">Paper</h3 >
+            <img id="paper-image-player" class="hidden" src="paper-img.jpg" />
         </p>    
         <p class="hidden">
-            <h3>Scissors</h3>
-            <img src="./scissors-img.jpg" />
+            <h3 id="scissors-headline-player" class="hidden">Scissors</h3>
+            <img id="scissors-image-player" class="hidden" src="./scissors-img.jpg" />
         </p>
         </main>
         </main>
@@ -39,16 +39,16 @@
         <p>Computer</p>
         
             <p class="hidden">
-            <h3>Rock</h3>
-            <img src="./rock-img.jpg" />
+            <h3 id="rock-headline-computer" class="hidden">Rock</h3>
+            <img id="rock-image-computer" class="hidden" src="./rock-img.jpg" />
         </p>
         <p class="hidden">
-            <h3>Paper</h3>
-            <img src="./paper-img.jpg" />
+            <h3 id="paper-headline-computer" class="hidden">Paper</h3>
+            <img id="paper-image-computer" class="hidden" src="./paper-img.jpg" />
         </p>
         <p class="hidden">
-            <h3>Scissors</h3>
-            <img src="./scissors-img.jpg" />
+            <h3 id="scissors-headline-computer" class="hidden">Scissors</h3>
+            <img id="scissors-image-computer" class="hidden" src="./scissors-img.jpg" />
         </p>
         </main>
     </main>
