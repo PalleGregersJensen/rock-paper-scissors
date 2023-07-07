@@ -110,7 +110,6 @@ function showPoints() {
   document.querySelector("#player-points").textContent = playerPoints;
 }
 
-
 // ======== next clicked - buttons hidden =======
 function nextGameClicked() {
   document.querySelector("#rock-button").classList.remove("hidden");
@@ -135,5 +134,24 @@ function nextGameClicked() {
   document.querySelector("#paper-button").addEventListener("click", choosePaper);
   document.querySelector("#scissors-button").addEventListener("click", chooseScissors);
   document.querySelector("#start-game-button").classList.add("hidden");
-  
+
+  if (playerPoints === 10 || computerPoints === 10) {
+    document.querySelector("#new-game-button").classList.remove("hidden");
+    document.querySelector("#rock-button").classList.add("hidden");
+    document.querySelector("#paper-button").classList.add("hidden");
+    document.querySelector("#scissors-button").classList.add("hidden");
+    document.querySelector("#next-challenge-button").classList.add("hidden");
+    document.querySelector("#new-game-button").addEventListener("click", startNewGame);
+    if (playerPoints === 10) {
+      document.querySelector("#result-text").textContent = "Congratulations! You win";
+    } else if (computerPoints === 10) {
+      document.querySelector("#result-text").textContent = "Well fought. Unfortunately it was not enough. Computer wins";
+    }
+  }
+}
+
+function startNewGame() {
+  computerPoints = 0;
+  playerPoints = 0;
+  startGameClicked();
 }
