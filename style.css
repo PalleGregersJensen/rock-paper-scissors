@@ -1,0 +1,20 @@
+body {
+    background-color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#you {
+    grid-column: 1;
+}
+
+#computer {
+    grid-column: 2;
+}
