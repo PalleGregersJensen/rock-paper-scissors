@@ -98,16 +98,20 @@ function computerChosenWhatToPlay(playerValue) {
       console.log(playerPoints);
     }
   }
+
   showPoints();
   document.querySelector("#next-challenge-button").classList.remove("hidden");
   document.querySelector("#next-challenge-button").addEventListener("click", nextGameClicked);
 }
 
+// ======== show poitns for computer and player =======
 function showPoints() {
   document.querySelector("#computer-points").textContent = computerPoints;
   document.querySelector("#player-points").textContent = playerPoints;
 }
 
+
+// ======== next clicked - buttons hidden =======
 function nextGameClicked() {
   document.querySelector("#rock-button").classList.remove("hidden");
   document.querySelector("#paper-button").classList.remove("hidden");
@@ -131,4 +135,5 @@ function nextGameClicked() {
   document.querySelector("#paper-button").addEventListener("click", choosePaper);
   document.querySelector("#scissors-button").addEventListener("click", chooseScissors);
   document.querySelector("#start-game-button").classList.add("hidden");
+  
 }
