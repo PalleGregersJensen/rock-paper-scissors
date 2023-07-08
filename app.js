@@ -145,7 +145,8 @@ function nextGameClicked() {
       document.querySelector("#result-text").textContent = "Congratulations! You win";
       document.querySelector("#new-game-button").addEventListener("click", startNewGame);
     } else if (computerPoints === 10) {
-      document.querySelector("#result-text").textContent = "Well fought. Unfortunately it was not enough. Computer wins";
+      document.querySelector("#result-text").textContent =
+        "Well fought. Unfortunately it was not enough. Computer wins";
       document.querySelector("#new-game-button").addEventListener("click", startNewGame);
     }
   }
